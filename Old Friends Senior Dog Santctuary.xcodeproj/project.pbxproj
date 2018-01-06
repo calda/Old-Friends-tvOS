@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2E2C828620016F3900C94ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C828520016F3900C94ADF /* AppDelegate.swift */; };
-		2E2C828820016F3900C94ADF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C828720016F3900C94ADF /* FirstViewController.swift */; };
-		2E2C828A20016F3900C94ADF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C828920016F3900C94ADF /* SecondViewController.swift */; };
 		2E2C828D20016F3900C94ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C828B20016F3900C94ADF /* Main.storyboard */; };
 		2E2C828F20016F3A00C94ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2C828E20016F3A00C94ADF /* Assets.xcassets */; };
+		2E2C82972001700100C94ADF /* IndoorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C82962001700100C94ADF /* IndoorsViewController.swift */; };
+		2E2C82992001708200C94ADF /* Livestream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C82982001708200C94ADF /* Livestream.swift */; };
+		2E2C829B200171E100C94ADF /* OutdoorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C829A200171E100C94ADF /* OutdoorsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E2C828220016F3900C94ADF /* Old Friends Senior Dog Santctuary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Old Friends Senior Dog Santctuary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2C828220016F3900C94ADF /* Old Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Old Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2C828520016F3900C94ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E2C828720016F3900C94ADF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		2E2C828920016F3900C94ADF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2E2C828C20016F3900C94ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E2C828E20016F3A00C94ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E2C829020016F3A00C94ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2C82962001700100C94ADF /* IndoorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorsViewController.swift; sourceTree = "<group>"; };
+		2E2C82982001708200C94ADF /* Livestream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Livestream.swift; sourceTree = "<group>"; };
+		2E2C829A200171E100C94ADF /* OutdoorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdoorsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +48,7 @@
 		2E2C828320016F3900C94ADF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E2C828220016F3900C94ADF /* Old Friends Senior Dog Santctuary.app */,
+				2E2C828220016F3900C94ADF /* Old Friends.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				2E2C828520016F3900C94ADF /* AppDelegate.swift */,
-				2E2C828720016F3900C94ADF /* FirstViewController.swift */,
-				2E2C828920016F3900C94ADF /* SecondViewController.swift */,
+				2E2C82962001700100C94ADF /* IndoorsViewController.swift */,
+				2E2C829A200171E100C94ADF /* OutdoorsViewController.swift */,
+				2E2C82982001708200C94ADF /* Livestream.swift */,
 				2E2C828B20016F3900C94ADF /* Main.storyboard */,
 				2E2C828E20016F3A00C94ADF /* Assets.xcassets */,
 				2E2C829020016F3A00C94ADF /* Info.plist */,
@@ -67,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2E2C828120016F3900C94ADF /* Old Friends Senior Dog Santctuary */ = {
+		2E2C828120016F3900C94ADF /* Old Friends */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E2C829320016F3A00C94ADF /* Build configuration list for PBXNativeTarget "Old Friends Senior Dog Santctuary" */;
+			buildConfigurationList = 2E2C829320016F3A00C94ADF /* Build configuration list for PBXNativeTarget "Old Friends" */;
 			buildPhases = (
 				2E2C827E20016F3900C94ADF /* Sources */,
 				2E2C827F20016F3900C94ADF /* Frameworks */,
@@ -79,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "Old Friends Senior Dog Santctuary";
+			name = "Old Friends";
 			productName = "Old Friends Senior Dog Santctuary";
-			productReference = 2E2C828220016F3900C94ADF /* Old Friends Senior Dog Santctuary.app */;
+			productReference = 2E2C828220016F3900C94ADF /* Old Friends.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E2C828120016F3900C94ADF /* Old Friends Senior Dog Santctuary */,
+				2E2C828120016F3900C94ADF /* Old Friends */,
 			);
 		};
 /* End PBXProject section */
@@ -135,9 +138,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E2C828A20016F3900C94ADF /* SecondViewController.swift in Sources */,
 				2E2C828620016F3900C94ADF /* AppDelegate.swift in Sources */,
-				2E2C828820016F3900C94ADF /* FirstViewController.swift in Sources */,
+				2E2C829B200171E100C94ADF /* OutdoorsViewController.swift in Sources */,
+				2E2C82992001708200C94ADF /* Livestream.swift in Sources */,
+				2E2C82972001700100C94ADF /* IndoorsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +277,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -289,6 +294,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -304,7 +310,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E2C829320016F3A00C94ADF /* Build configuration list for PBXNativeTarget "Old Friends Senior Dog Santctuary" */ = {
+		2E2C829320016F3A00C94ADF /* Build configuration list for PBXNativeTarget "Old Friends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E2C829420016F3A00C94ADF /* Debug */,
