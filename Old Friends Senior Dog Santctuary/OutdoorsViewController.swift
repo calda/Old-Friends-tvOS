@@ -12,9 +12,7 @@ import AVKit
 class OutdoorsViewController: AVPlayerViewController {
     
     override func viewDidLoad() {
-        let player = AVPlayer(url: Livestream.outdoors.url)
-        self.player = player
-        player.play()
+        Livestream.outdoors.play(in: self)
     }
     
 }

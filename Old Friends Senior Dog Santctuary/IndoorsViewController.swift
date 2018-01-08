@@ -12,9 +12,7 @@ import AVKit
 class IndoorsViewController: AVPlayerViewController {
     
     override func viewDidLoad() {
-        let player = AVPlayer(url: Livestream.indoors.url)
-        self.player = player
-        player.play()
+        Livestream.indoors.play(in: self)
     }
     
 }
