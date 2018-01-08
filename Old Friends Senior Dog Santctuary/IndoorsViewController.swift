@@ -7,21 +7,11 @@
 //
 
 import UIKit
-import AVKit
 
-class IndoorsViewController: AVPlayerViewController {
+class IndoorsViewController: LivestreamViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        if let player = player {
-            player.play()
-            player.seek(to: Date())
-        } else {
-            Livestream.indoors.play(in: self)
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        player?.pause()
+    override var livestream: Livestream {
+        return .indoors
     }
     
 }
