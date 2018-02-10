@@ -14,6 +14,7 @@
 		2E2C82992001708200C94ADF /* Livestream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C82982001708200C94ADF /* Livestream.swift */; };
 		2E2C829B200171E100C94ADF /* OutdoorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C829A200171E100C94ADF /* OutdoorsViewController.swift */; };
 		2E40ACF2200303A2008B15A6 /* HCYoutubeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E40ACF1200303A2008B15A6 /* HCYoutubeParser.m */; };
+		2EBAD7DA202F6EF4006EBE72 /* RoverCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAD7D9202F6EF4006EBE72 /* RoverCamViewController.swift */; };
 		2EEB3A482003172A00D42A5C /* LivestreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB3A472003172A00D42A5C /* LivestreamViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		2E40ACEF20030386008B15A6 /* HCYoutubeParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCYoutubeParser.h; sourceTree = "<group>"; };
 		2E40ACF0200303A1008B15A6 /* Old Friends-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Old Friends-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E40ACF1200303A2008B15A6 /* HCYoutubeParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCYoutubeParser.m; sourceTree = "<group>"; };
+		2EBAD7D9202F6EF4006EBE72 /* RoverCamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverCamViewController.swift; sourceTree = "<group>"; };
 		2EEB3A472003172A00D42A5C /* LivestreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LivestreamViewController.swift; path = "Old Friends Senior Dog Santctuary/LivestreamViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				2EEB3A472003172A00D42A5C /* LivestreamViewController.swift */,
 				2E2C82962001700100C94ADF /* IndoorsViewController.swift */,
 				2E2C829A200171E100C94ADF /* OutdoorsViewController.swift */,
+				2EBAD7D9202F6EF4006EBE72 /* RoverCamViewController.swift */,
 				2E2C82982001708200C94ADF /* Livestream.swift */,
 				2E2C828B20016F3900C94ADF /* Main.storyboard */,
 				2E2C828E20016F3A00C94ADF /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 				2E2C82992001708200C94ADF /* Livestream.swift in Sources */,
 				2E40ACF2200303A2008B15A6 /* HCYoutubeParser.m in Sources */,
 				2E2C82972001700100C94ADF /* IndoorsViewController.swift in Sources */,
+				2EBAD7DA202F6EF4006EBE72 /* RoverCamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

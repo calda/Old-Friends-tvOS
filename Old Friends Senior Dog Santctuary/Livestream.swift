@@ -17,6 +17,9 @@ struct Livestream {
     static let outdoors = Livestream("Outdoors",
         at: "https://www.youtube.com/watch?v=_msUij_PAxk")
     
+    static let roverCam = Livestream("Rover Cam",
+        at: "https://www.youtube.com/watch?v=v7WqF8s1aZs")
+    
     // MARK: Instance
     
     let name: String
