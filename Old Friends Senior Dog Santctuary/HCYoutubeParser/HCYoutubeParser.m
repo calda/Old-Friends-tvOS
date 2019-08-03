@@ -121,64 +121,29 @@
                 
                 NSMutableDictionary *parts = [responseString dictionaryFromQueryStringComponents];
                 
+                // Reworked on 3 Aug 2019,
+                // no longer the original HCYoutubeParser impl:
                 if (parts) {
-                    NSString *fmtStreamMapString = [[parts objectForKey:@"url_encoded_fmt_stream_map"] objectAtIndex:0];
-                    if (fmtStreamMapString.length > 0) {
+                    NSArray *playerResponse = ((NSArray *)parts[@"player_response"]);
+                    
+                    if (playerResponse && playerResponse.count) {
+                        NSString *playerResponseJsonBody = (NSString *)playerResponse[0];
                         
-                        NSArray *fmtStreamMapArray = [fmtStreamMapString componentsSeparatedByString:@","];
-                        NSMutableDictionary *videoDictionary = [NSMutableDictionary dictionary];
-                        
-                        for (NSString *videoEncodedString in fmtStreamMapArray) {
-                            NSMutableDictionary *videoComponents = [videoEncodedString dictionaryFromQueryStringComponents];
-                            NSString *type = [[[videoComponents objectForKey:@"type"] objectAtIndex:0] stringByDecodingURLFormat];
-                            NSString *signature = nil;
+                        if (playerResponseJsonBody) {
+                            NSDictionary *playerResponse = (NSDictionary *)[NSJSONSerialization JSONObjectWithData: [playerResponseJsonBody dataUsingEncoding: NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
                             
-                            if (![videoComponents objectForKey:@"stereo3d"]) {
-                                if ([videoComponents objectForKey:@"itag"]) {
-                                    signature = [[videoComponents objectForKey:@"itag"] objectAtIndex:0];
-                                }
+                            if (playerResponse) {
+                                NSDictionary *streamingData = (NSDictionary *)[playerResponse valueForKey:@"streamingData"];
                                 
-                                if (signature && [type rangeOfString:@"mp4"].length > 0) {
-                                    NSString *url = [[[videoComponents objectForKey:@"url"] objectAtIndex:0] stringByDecodingURLFormat];
-                                    url = [NSString stringWithFormat:@"%@&signature=%@", url, signature];
+                                if (streamingData) {
+                                    NSString *hlsManifestUrl = (NSString *)[streamingData valueForKey:@"hlsManifestUrl"];
                                     
-                                    NSString *quality = [[[videoComponents objectForKey:@"quality"] objectAtIndex:0] stringByDecodingURLFormat];
-                                    if ([videoComponents objectForKey:@"stereo3d"] && [[videoComponents objectForKey:@"stereo3d"] boolValue]) {
-                                        quality = [quality stringByAppendingString:@"-stereo3d"];
-                                    }
-                                    if([videoDictionary valueForKey:quality] == nil) {
-                                        [videoDictionary setObject:url forKey:quality];
+                                    if (hlsManifestUrl) {
+                                        data = @{ @"live": hlsManifestUrl };
                                     }
                                 }
                             }
                         }
-                        
-                        // add some extra information about this video to the dictionary we pass back to save on the amounts of network requests
-                        if (videoDictionary.count > 0)
-                        {
-                            NSMutableDictionary *optionsDict = [NSMutableDictionary dictionary];
-                            NSArray *keys = @[//@"author", // youtube channel name
-                                              //@"avg_rating", // average ratings on yt when downloaded
-                                              @"iurl", //@"iurlmaxres", @"iurlsd", // thumbnail urls
-                                              //@"keywords", // author defined keywords
-                                              @"length_seconds", // total duration in seconds
-                                              @"title", // video title
-                                              //@"video_id"
-                                              ]; // youtube id
-                            
-                            for (NSString *key in keys)
-                            {
-                                [optionsDict setObject:parts[key][0] forKey:key]; // [0] because we want the object and not the array
-                            }
-                            
-                            [videoDictionary setObject:optionsDict forKey:@"moreInfo"];
-                        }
-                        
-                        data = videoDictionary;
-                    }
-                    // Check for live data
-                    else if ([parts objectForKey:@"live_playback"] != nil && [parts objectForKey:@"hlsvp"] != nil && [[parts objectForKey:@"hlsvp"] count] > 0) {
-                        data = @{ @"live": [parts objectForKey:@"hlsvp"][0] };
                     }
                 }
             }

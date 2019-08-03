@@ -12,13 +12,13 @@ import AVKit
 struct Livestream {
     
     static let indoors = Livestream("Indoors",
-        at: "https://www.youtube.com/watch?v=1CnMUaokoSo")
+        at: "https://www.youtube.com/watch?v=AGpx0wH0gaM")
     
     static let outdoors = Livestream("Outdoors",
-        at: "https://www.youtube.com/watch?v=_msUij_PAxk")
+        at: "https://www.youtube.com/watch?v=gXnW2pfhL6Y")
     
     static let roverCam = Livestream("Rover Cam",
-        at: "https://www.youtube.com/watch?v=v7WqF8s1aZs")
+        at: "https://www.youtube.com/watch?v=BOdB3yKf-s0")
     
     // MARK: Instance
     
